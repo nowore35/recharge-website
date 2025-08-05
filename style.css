@@ -14,7 +14,7 @@ input, select {
   max-width: 300px;
   padding: 10px;
   margin: 10px 0 20px;
-  background: #222 url("assets/hacker.gif");
+  background: #222 url("hacker.gif");
   color: #0f0;
   border: 1px solid #0f0;
   border-radius: 6px;
@@ -33,7 +33,7 @@ body {
   margin: 5px;
   padding: 10px;
   height: 150vh;
-  background: #000 url("assets/hacker.gif") no-repeat center center / cover;
+  background: #000 url("hacker.gif") no-repeat center center / cover;
   display: flex;
   justify-content: center;
   align-items: center;
