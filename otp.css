@@ -1,0 +1,115 @@
+/* ✅ Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Body Setup with Dark Background & Roboto */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #101010;
+  color: #e8eaed;
+  min-height: 100vh;
+  padding: 48px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ✅ Google Logo */
+.google-logo {
+  width: 50px;
+  max-width: 100%;
+  margin-bottom: 36px;
+}
+
+/* ✅ Title */
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* ✅ Subtext */
+p {
+  font-size: 16px;
+  color: #9aa0a6;
+  margin-bottom: 30px;
+}
+
+/* ✅ OTP Input Boxes */
+.body {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+input:focus {
+  border-color: #8ab4f8;
+  box-shadow: 0 0 0 1px #8ab4f8;
+}
+
+.otp-input {
+  width: 30px;        /* reduced from 42px */
+  height: 40px;       /* reduced from 52px */
+  font-size: 14px;    /* slightly smaller font */
+  text-align: center;
+  border: 1px solid #5f6368;
+  border-radius: 4px;
+  background-color: #202124;
+  color: #e8eaed;
+  outline: none;
+  transition: border-color 0.2s ease;
+  margin: 2px;
+}
+
+/* ✅ Footer with Button and Link */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #8ab4f8;
+  color: #000;
+  border: none;
+  padding: 10px 24px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #a0c3ff;
+}
+
+/* ✅ Link Styling */
+a {
+  color: #8ab4f8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive for Small Screens */
+@media screen and (max-width: 480px) {
+  .footer {
+    flex-direction: column-reverse;
+    gap: 15px;
+    text-align: center;
+  }
+}

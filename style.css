@@ -1,0 +1,155 @@
+/* Global font and label styles */
+label {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  color: #00ff99;
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Input and select fields */
+input, select {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 0 20px;
+  background: #222 url("assets/hacker.gif");
+  color: #0f0;
+  border: 1px solid #0f0;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
+
+/* Placeholder text style */
+input::placeholder {
+  color: #888888;
+  font-style: italic;
+}
+
+/* Body background and layout */
+body {
+  margin: 5px;
+  padding: 10px;
+  height: 150vh;
+  background: #000 url("assets/hacker.gif") no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+}
+
+/* Form container */
+.container {
+  padding: 20px;
+  border-radius: 15px;
+  animation: rainbowBorder 8s linear infinite;
+  box-shadow: 0 0 30px #0f0;
+  color: #fff;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Rainbow animation for border */
+@keyframes rainbowBorder {
+  0%   { box-shadow: 0 0 25px #f00; }
+  14%  { box-shadow: 0 0 25px #ff0; }
+  28%  { box-shadow: 0 0 25px #0f0; }
+  42%  { box-shadow: 0 0 25px #0ff; }
+  57%  { box-shadow: 0 0 25px #00f; }
+  71%  { box-shadow: 0 0 25px #f0f; }
+  85%  { box-shadow: 0 0 25px #fff; }
+  100% { box-shadow: 0 0 25px #f00; }
+}
+
+/* Phone number field container */
+.phone-field {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Phone prefix box */
+.phone-field span {
+  background: #111;
+  padding: 10px;
+  border: 1px solid #0f0;
+  border-radius: 6px 0 0 6px;
+  color: #0f0;
+}
+
+/* Special label for Bitcoin */
+label.btc-label {
+  color: #f7931a;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Payment option block */
+.payment-option {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Bitcoin icon styling */
+.bitcoin-icon {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  margin-right: 5px;
+  padding: 10px;
+}
+
+/* Submit button with animated gradient */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background: linear-gradient(270deg, #0f0, #00f, #f0f, #f00, #ff0, #0ff, #0f0);
+  background-size: 1000% 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: colorFlow 4s linear infinite;
+}
+
+/* Hover effect on submit button */
+button[type="submit"]:hover {
+  background-color: #0f0;
+}
+
+/* Disclaimer or footer text */
+footer.disclaimer {
+  text-align: center;
+  margin-top: 30px;
+  color: gray;
+  font-size: 12px;
+}
+
+/* Animated h1 heading */
+h1 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: linear-gradient(270deg, #0f0, #00f, #f0f, #f00, #ff0, #0ff, #0f0);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorFlow 4s linear infinite;
+  text-shadow: 0 0 10px #0f0;
+}
+
+/* Shared animated gradient background */
+@keyframes colorFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+

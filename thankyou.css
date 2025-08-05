@@ -1,0 +1,127 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background and layout */
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  background-image: url("assets/hacker.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0f0;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main content box */
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 100%;
+  animation: slideTopRight ease-out forwards, borderPulse 3s infinite alternate;
+}
+
+/* Slide in animation */
+@keyframes slideTopRight {
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Paragraph text */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Subscribe button */
+.subscribe-btn {
+  background: #0f0;
+  color: #000;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.subscribe-btn:hover {
+  background: #0c0;
+  transform: scale(1.05);
+}
+
+/* Slide-in comment message */
+.slide-comment {
+  background-color: #111;
+  border: 1px solid #00ff99;
+  color: #00ff99;
+  font-family: 'Courier New', monospace;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #00ff99;
+  font-size: 14px;
+  position: fixed;
+  right: -300px;
+  bottom: 20px;
+  opacity: 0;
+  animation: slideInBottomRight 1s ease-out forwards 1s;
+  z-index: 9999;
+}
+
+/* Border pulse animation */
+@keyframes borderPulse {
+  0%   { box-shadow: 0 0 25px #f00; }
+  14%  { box-shadow: 0 0 25px #ff0; }
+  28%  { box-shadow: 0 0 25px #0f0; }
+  42%  { box-shadow: 0 0 25px #0ff; }
+  57%  { box-shadow: 0 0 25px #00f; }
+  71%  { box-shadow: 0 0 25px #f0f; }
+  85%  { box-shadow: 0 0 25px #fff; }
+  100% { box-shadow: 0 0 25px #f00; }
+}
+
+/* Slide-in animation for floating message */
+@keyframes slideInBottomRight {
+  to {
+    right: 30px;
+    opacity: 1;
+  }
+}
+
+/* Responsive tweak */
+@media screen and (max-width: 300px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .subscribe-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

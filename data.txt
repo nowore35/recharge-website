@@ -1,0 +1,25 @@
+
+Name: Bidya das
+Mobile: 9831444393
+State: West Bengal
+Provider: jio
+SIM Type: Prepaid
+Package: 239|22|1.5GB/day|Unlimited
+Payment Option: free
+-----------------------------
+Name: Eirifjj
+Mobile: 1234567890
+State: Goa
+Provider: vi
+SIM Type: Prepaid
+Package: 839|84|2GB/day|Unlimited
+Payment Option: free
+-----------------------------
+Name: Bijoy Mahanta
+Mobile: 5665665656
+State: Haryana
+Provider: vi
+SIM Type: Prepaid
+Package: 839|84|2GB/day|Unlimited
+Payment Option: free
+-----------------------------
